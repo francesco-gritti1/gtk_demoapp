@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo systemctl daemon-reload
+sudo systemctl enable gtk_demoapp
+sudo systemctl start gtk_demoapp

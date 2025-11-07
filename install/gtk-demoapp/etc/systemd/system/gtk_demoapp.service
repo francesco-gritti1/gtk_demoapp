@@ -1,0 +1,26 @@
+[Unit]
+Description=gtk_demoapp 
+After=graphical.target
+
+[Service]
+User=francesco
+
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/local/bin/gtk_demoapp
+
+Environment=DISPLAY=:1
+Environment=XAUTHORITY=/run/user/1000/gdm/Xauthority
+
+
+Restart=on-failure
+
+StandardOutput=file:/var/log/gtk_demoapp.log
+StandardError=file:/var/log/gtk_demoapp.log
+
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=graphical.target
+
+
+
