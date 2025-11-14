@@ -18,8 +18,17 @@ mkdir -p install/$PKG_NAME/etc/systemd/system/
 
 
 
-make config=release
+make config=release -j4
+if [ $? -ne 0 ]; then
+  echo "Error: compilation error."
+  exit 1
+fi
+
 cp ./bin/Release/$APP_NAME ./install/$PKG_NAME/usr/local/bin
+if [ $? -ne 0 ]; then
+  echo "Error: unable to copy executables."
+  exit 1
+fi
 
 
 
@@ -43,6 +52,10 @@ echo "Versione aggiornata a $VERSION nel file $CONTROL_FILE"
 
 # build .deb package
 dpkg --build install/$PKG_NAME
+if [ $? -ne 0 ]; then
+  echo "Error: unable to create .deb archieve."
+  exit 1
+fi
 
 
 
