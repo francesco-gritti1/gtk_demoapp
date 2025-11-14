@@ -5,6 +5,8 @@ APP_NAME="gtk_demoapp"
 PKG_NAME="gtk-demoapp"
 
 
+premake5 gmake
+
 mkdir -p install
 mkdir -p install/$PKG_NAME
 mkdir -p install/$PKG_NAME/DEBIAN
