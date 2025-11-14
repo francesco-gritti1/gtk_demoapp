@@ -28,12 +28,12 @@ ifeq ($(config),debug)
   INCLUDES +=
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -g $$(pkg-config --cflags gtk+-3.0 libconfig++ json-glib-1.0) $$(pkg-config --cflags libconfig++) -Wall
-  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -g -std=c++23 $$(pkg-config --cflags gtk+-3.0 libconfig++ json-glib-1.0) $$(pkg-config --cflags libconfig++) -Wall
+  ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -g $$(pkg-config --cflags gtk+-3.0) -Wall
+  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -g -std=c++23 $$(pkg-config --cflags gtk+-3.0) -Wall
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   LIBS +=
   LDDEPS +=
-  ALL_LDFLAGS += $(LDFLAGS) $$(pkg-config --libs gtk+-3.0 libconfig++ json-glib-1.0) $$(pkg-config --libs libconfig++) -rdynamic
+  ALL_LDFLAGS += $(LDFLAGS) $$(pkg-config --libs gtk+-3.0) -rdynamic
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
   endef
@@ -64,12 +64,12 @@ ifeq ($(config),release)
   INCLUDES +=
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -O2 $$(pkg-config --cflags gtk+-3.0 libconfig++ json-glib-1.0) $$(pkg-config --cflags libconfig++) -Wall
-  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -O2 -std=c++23 $$(pkg-config --cflags gtk+-3.0 libconfig++ json-glib-1.0) $$(pkg-config --cflags libconfig++) -Wall
+  ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -O2 $$(pkg-config --cflags gtk+-3.0) -Wall
+  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -O2 -std=c++23 $$(pkg-config --cflags gtk+-3.0) -Wall
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   LIBS +=
   LDDEPS +=
-  ALL_LDFLAGS += $(LDFLAGS) -s $$(pkg-config --libs gtk+-3.0 libconfig++ json-glib-1.0) $$(pkg-config --libs libconfig++) -rdynamic
+  ALL_LDFLAGS += $(LDFLAGS) -s $$(pkg-config --libs gtk+-3.0) -rdynamic
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
   endef

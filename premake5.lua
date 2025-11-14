@@ -24,16 +24,14 @@ project "gtk_demoapp"
     }
 
     buildoptions {
-        "$$(pkg-config --cflags gtk+-3.0 libconfig++ json-glib-1.0)",
-        "$$(pkg-config --cflags libconfig++)",
+        "$$(pkg-config --cflags gtk+-3.0)",
         "-Wall",
         --"-Werror",
         --"-pedantic"
     }
 
     linkoptions {
-        "$$(pkg-config --libs gtk+-3.0 libconfig++ json-glib-1.0)",
-        "$$(pkg-config --libs libconfig++)",
+        "$$(pkg-config --libs gtk+-3.0)",
         "-rdynamic"
     }
 
