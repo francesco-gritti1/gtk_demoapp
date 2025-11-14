@@ -6,7 +6,7 @@ Package: gtk-demoapp
 Version: 1.5
 Architecture: all
 Maintainer: Francesco Gritti grittifrancesco2802@gmail.com
-Depends: libgtk-3-dev (>= 3.24.41-4ubuntu1.3)
+Depends: libgtk-3-dev (>= 3.24.41-4ubuntu1.3), gcc-13 (>=13.3.0-6ubuntu2~24.04)
 Description: Esempio Gtk
 
 
