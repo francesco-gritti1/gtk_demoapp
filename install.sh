@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo ./create_deb
+./create_deb.sh
 if [ $? -ne 0 ]; then
   echo "Error: unable to create .deb archieve."
   exit 1
