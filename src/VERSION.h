@@ -4,8 +4,8 @@
 #define VERSION_h
 
 
-#define ver_MAJ  1
-#define ver_MIN  9
+#define ver_MAJ  2
+#define ver_MIN  0
 
 
 #endif
