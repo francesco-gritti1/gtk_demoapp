@@ -5,7 +5,7 @@
 
 
 #define ver_MAJ  2
-#define ver_MIN  1
+#define ver_MIN  2
 
 
 #endif
